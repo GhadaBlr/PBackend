@@ -10,7 +10,7 @@ const PORT = 3000;
 app.use(express.json());
 
 // MongoDB Connection for Notification DB
-mongoose.connect('mongodb://localhost:27017/Notification', {
+mongoose.connect('mongodb://localhost:28000/Notification', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
@@ -19,7 +19,7 @@ mongoose.connect('mongodb://localhost:27017/Notification', {
   .catch(err => console.error('Error connecting to Notification MongoDB:', err));
 
 // MongoDB Connection for Delivery DB
-mongoose.connect('mongodb://localhost:27017/Delivery', {
+mongoose.connect('mongodb://localhost:28000/Delivery', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {

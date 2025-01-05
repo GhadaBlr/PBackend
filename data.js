@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // ** Connection to the Notification Database **
-mongoose.connect('mongodb://localhost:27017/Notification', {
+mongoose.connect('mongodb://localhost:28000/Notification', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -35,7 +35,7 @@ Notif.create({
 
 
 // ** Connection to the Delivery Database **
-mongoose.connect('mongodb://localhost:27017/Delivery', {
+mongoose.connect('mongodb://localhost:28000/Delivery', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -57,7 +57,7 @@ const DeliveryP = mongoose.model('DeliveryP', deliverySchema);
 
 // Insert a document into the DeliveryP collection
 DeliveryP.create({
-  recipient: "user96@example.com",
+  recipient: "user88@example.com",
   message: "Votre commande a été expédiée par le transporteur !",
   type: "delivery-update",
   sentAt: new Date("2024-08-18T14:00:00Z"),
